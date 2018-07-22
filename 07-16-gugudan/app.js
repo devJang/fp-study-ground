@@ -10,6 +10,7 @@ const _generateTmpl = ({ min, max }, tmpl) => {
 	return result;
 };
 
+// TODO: 중복 고민하기
 const selectDanHandler = (selectedDan, max) => {
 	const initOptions = {
 		min: 1,
@@ -22,6 +23,7 @@ const selectDanHandler = (selectedDan, max) => {
 	);
 };
 
+// TODO: 중복 고민하기
 const init = (max = 9) => {
 	const initOptions = {
 		min: 2,
@@ -32,16 +34,17 @@ const init = (max = 9) => {
 };
 
 window.onload = function() {
-	const max = 9;
+	const danMax = 14;
+	const columnMax = 9;
 
-	init(max);
+	init(danMax);
 
 	$SELECT_DAN.addEventListener(
 		'click',
 		({ target }) => {
 			if (target.classList.value !== 'selected-item') return;
 
-			selectDanHandler(target.value, max);
+			selectDanHandler(target.value, columnMax);
 		},
 		false,
 	);

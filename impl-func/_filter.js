@@ -1,7 +1,7 @@
 const _each = require('./_each.js');
 
 const _filter = (list, condition) => {
-	let newList = [];
+	const newList = [];
 
 	_each(list, (val) => condition(val) && newList.push(val));
 
