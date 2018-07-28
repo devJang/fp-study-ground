@@ -7,3 +7,7 @@ const _map = (list, mapper) => {
 
 	return new_list;
 };
+
+const result = _map([{ id: 1, name: 'aa' }, { id: 2, name: 'bb' }], (user) => user.name);
+
+console.log(result);
